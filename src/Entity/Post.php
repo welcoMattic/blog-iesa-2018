@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
@@ -20,6 +21,12 @@ class Post
      * @ORM\Column(type="string")
      */
     private $title;
+
+    /**
+     * @Gedmo\Slug(fields={"title"}, updatable=false, separator="-")
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
 
     /**
      * @ORM\Column(type="text")
@@ -50,6 +57,18 @@ class Post
     public function setTitle($title): self
     {
         $this->title = $title;
+
+        return $this;
+    }
+
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    public function setSlug($slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }
