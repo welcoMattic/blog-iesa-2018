@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
@@ -32,14 +33,19 @@ class Post
     private $isPublished;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="posts")
-     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     * @ORM\ManyToMany(targetEntity="Category")
+     * @ORM\JoinTable(name="post_categories")
      */
-    private $category;
+    private $categories;
 
     public function getId()
     {
         return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     public function getTitle()
@@ -47,11 +53,9 @@ class Post
         return $this->title;
     }
 
-    public function setTitle($title): self
+    public function setTitle($title)
     {
         $this->title = $title;
-
-        return $this;
     }
 
     public function getBody()
@@ -59,11 +63,9 @@ class Post
         return $this->body;
     }
 
-    public function setBody($body): self
+    public function setBody($body)
     {
         $this->body = $body;
-
-        return $this;
     }
 
     public function getisPublished()
@@ -71,22 +73,18 @@ class Post
         return $this->isPublished;
     }
 
-    public function setIsPublished($isPublished): self
+    public function setIsPublished($isPublished)
     {
         $this->isPublished = $isPublished;
-
-        return $this;
     }
 
-    public function getCategory(): ?Category
+    public function getCategories()
     {
-        return $this->category;
+        return $this->categories;
     }
 
-    public function setCategory(?Category $category): self
+    public function setCategories($categories)
     {
-        $this->category = $category;
-
-        return $this;
+        $this->categories = $categories;
     }
 }
