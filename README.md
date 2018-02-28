@@ -13,3 +13,4 @@ X = step number
 - step/3 : Install orm-pack and generate Post entity
 - step/4 : Add Category entity and relation with Post
 - step/5 : Add slug property on Post entity
+- step/6 : Add fixtures
