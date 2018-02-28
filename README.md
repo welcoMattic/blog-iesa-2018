@@ -11,3 +11,4 @@ X = step number
 - step/1 : Add a BlogController
 - step/2 : Install debug tools
 - step/3 : Install orm-pack and generate Post entity
+- step/4 : Add Category entity and relation with Post
