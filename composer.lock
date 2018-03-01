@@ -4,7 +4,13 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "b73f18f849c07cd04154e46863c3f1d2",
+||||||| parent of bdb1bed... Add webserver
+    "content-hash": "a4ed0df15cc0a04fd363e8644e3bcc24",
+=======
+    "content-hash": "0a86d8d1dcd0b4a651bee6464d973b75",
+>>>>>>> bdb1bed... Add webserver
     "packages": [
         {
             "name": "doctrine/annotations",

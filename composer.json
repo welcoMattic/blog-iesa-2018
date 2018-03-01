@@ -10,8 +10,13 @@
         "symfony/framework-bundle": "^3.4",
         "symfony/lts": "^3",
         "symfony/maker-bundle": "^1.1",
+<<<<<<< HEAD
         "symfony/twig-bundle": "^3.4",
         "symfony/web-server-bundle": "^3.4",
+||||||| parent of bdb1bed... Add webserver
+=======
+        "symfony/web-server-bundle": "^3.4",
+>>>>>>> bdb1bed... Add webserver
         "symfony/yaml": "^3.4"
     },
     "require-dev": {
